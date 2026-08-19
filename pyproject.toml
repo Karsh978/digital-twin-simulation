@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "digital-twin"
+version = "0.2.0"
+description = "Industry digital twin: micro-slice + event-bus meta-architecture (v2), with U.S. venture capital as the worked example"
+requires-python = ">=3.10"
+dependencies = []
+
+[project.optional-dependencies]
+llm = ["openai>=1.0"]
+dev = ["pytest>=7.0"]
+
+[tool.setuptools.packages.find]
+include = ["digital_twin*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
